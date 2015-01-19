@@ -10,7 +10,7 @@
     <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> -->
     <style>
     html, body, #map-canvas {
-    height: 800px !important;
+    height: 700px !important;
     margin: 0px;
     padding: 0px
     }
@@ -34,42 +34,47 @@
         <a class="navbar-brand" href="#">Title</a>
       </div>
     </nav>
-    <div >
-      <map id="map-canvas" center="6.906401, 79.854882" on-click="addMarker()"  zoom="10">
-      
-
-      <div ng-repeat="map in maps" >
-
-      <marker id="foo-{{map.type}}" on-clssick="mapinfo( '{{map.i}}')"
-      on-click="showInfoWindow(event, 'bar-{{map.type}}')"
-      position="{{map.latitude}},{{map.longitude}}">
-
-        <info-window id="bar-{{map.type}}"  visible-on-marker="foo-{{map.type}}">
-        <div ng-non-bindable="">
-          <div id="siteNotice"></div>
-          <h1 id="firstHeading" class="firstHeading"> {{map.name}} </h1>
-          <div id="bodyContent">
-
+    
+    <div class="row">
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <map id="map-canvas" center="6.906401, 79.854882" on-click="addMarker()"  zoom="10">
+        <div ng-repeat="map in maps" >
+          <marker id="foo-{{map.type}}" data-index="{{map.i}}" on-click="mapinfo( '{{map.i}}')"
+          on-sclick="showInfoWindow(event, 'bar-{{map.type}}')"
+          position="{{map.latitude}},{{map.longitude}}">
+          <!--   <info-window id="bar-{{map.type}}"  visible-on-marker="foo-{{map.type}}">
+          <div ng-non-bindable="">
+            <div id="siteNotice"></div>
+            <h1 id="firstHeading" class="firstHeading"> {{map.name}} </h1>
+            <div id="bodyContent">
               <h2>People</h2>
-
               <div ng-repeat="people in map.people">
-
                 <p> Name - {{people.name}} </p>
                 <p> Designation - {{people.designation}} </p>
                 <p> Email - {{people.email}} </p>
-
               </div>
-
+            </div>
+          </div>
+          </info-window> -->
+        </div>
+        </map>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div id="siteNotice"></div>
+            <h1 id="firstHeading" class="firstHeading"> {{click.name}} </h1>
+            <div id="bodyContent">
+              <h2>People</h2>
+              <div ng-repeat="people in click.people">
+                <p> Name - {{people.name}} </p>
+                <p>&nbsp;&nbsp; Designation - {{people.designation}} </p>
+                <p>&nbsp;&nbsp; Email - {{people.email}} </p>
+              </div>
+            </div>
           </div>
         </div>
-        </info-window>
-
-
-
       </div>
-
-      </map>
-
     </div>
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery.js"></script>

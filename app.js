@@ -10,7 +10,9 @@
         error(function(data, status, headers, config) {});
 
         $scope.mapinfo = function  (id) {
-          // body...
+          console.log(id);
+          console.log(this);
+          $scope.click = $scope.maps[this.index];
         }
     });
 
