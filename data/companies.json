@@ -1,0 +1,49 @@
+{
+  "data":[
+    {
+      "i":0,
+      "type":"company",
+      "latitude":"6.906401",
+      "longitude":"79.854882",
+      "description":"Be there for years",
+      "name":"99X Technology",
+      "technology_stack":["ASP","JavaScript","CSS"],
+      "website":"www.99xtechnology.com",
+      "operational_locations":"norway",
+      "link":[
+        "http://www.99xtechnology.com/our-company/",
+        "http://www.99xtechnology.com/awards"
+      ],
+      "people":[
+        {
+          "name":"Mano Sekaram",
+          "designation":"CEO",
+          "email":"mano@99xt.lk",
+          "tel":"07732545853",
+          "social":[
+            {
+              "name":"facebook",
+              "link":"facebook.com/mano"
+            },
+            {
+              "name":"twitter",
+              "link":"twitter.com/mano"
+            }
+          ]
+        },
+        {
+          "name":"Shenika",
+          "designation":"Head HR",
+          "email":"Shenika@99xt.lk",
+          "social":[
+            {
+              "name":"facebook",
+              "link":"facebook.com/Shenika"
+            }
+
+          ]
+        }
+      ]
+    }
+  ]
+}
