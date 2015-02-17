@@ -4,7 +4,7 @@ var companyObj;
 var app = angular.module('mapit', ['ngMap']);
 app.controller('mainController', function($scope, $http) {
     $scope.infoVisible = false;
-    $http.get('/data/companies.json').
+    $http.get('data/companies.json').
     success(function(data) {
         console.log(data);
         companyObj = data;
